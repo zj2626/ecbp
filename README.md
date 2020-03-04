@@ -8,7 +8,12 @@
 *
 
 ## 工程结构
-*
+```
+ecbp
+├── server/registry -- 注册中心-eureka
+├── ecbp-common -- 常用工具封装包
+├── ecbp-store -- 基础商城模块
+```
 
 ## 技术文档
 *
