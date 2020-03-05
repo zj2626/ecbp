@@ -14,6 +14,7 @@
         <java.version>1.8</java.version>
         <spring.boot.version>2.1.4.RELEASE</spring.boot.version>
         <spring.cloud.version>Finchley.RELEASE</spring.cloud.version>
+        <ecbp.version>1.0.0-SNAPSHOT</ecbp.version>
     </properties>
 
     <dependencies>

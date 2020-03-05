@@ -4,20 +4,15 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.github.ecbp</groupId>
-        <artifactId>ecbp-store-parent</artifactId>
+        <artifactId>ecbp-store-service-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>ecbp-store-impl</artifactId>
+    <artifactId>ecbp-store-service-impl</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>ecbp-store-impl</name>
+    <name>ecbp-store-service-impl</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
-        <dependency>
-            <groupId>com.github.ecbp</groupId>
-            <artifactId>ecbp-store-apis</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>com.github.ecbp</groupId>
             <artifactId>ecbp-store-service-apis</artifactId>

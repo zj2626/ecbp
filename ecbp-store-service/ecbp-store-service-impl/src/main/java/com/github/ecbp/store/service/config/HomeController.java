@@ -1,4 +1,4 @@
-package com.github.ecbp.store.config;
+package com.github.ecbp.store.service.config;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
