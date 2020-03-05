@@ -4,28 +4,23 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.github.ecbp</groupId>
-        <artifactId>ecbp-order-parent</artifactId>
+        <artifactId>ecbp-order-service-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>ecbp-order-impl</artifactId>
+    <artifactId>ecbp-order-service-impl</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>ecbp-order-impl</name>
+    <name>ecbp-order-service-impl</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
         <dependency>
             <groupId>com.github.ecbp</groupId>
-            <artifactId>ecbp-order-apis</artifactId>
+            <artifactId>ecbp-order-service-apis</artifactId>
         </dependency>
 
         <dependency>
             <groupId>com.github.ecbp</groupId>
             <artifactId>ecbp-common</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>com.github.ecbp</groupId>
-            <artifactId>ecbp-order-service-apis</artifactId>
         </dependency>
 
         <dependency>

@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.github.ecbp</groupId>
-    <artifactId>ecbp-order-parent</artifactId>
+    <artifactId>ecbp-order-service-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>ecbp-order-parent</name>
+    <name>ecbp-order-service-parent</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -32,17 +32,12 @@
             </dependency>
             <dependency>
                 <groupId>com.github.ecbp</groupId>
-                <artifactId>ecbp-order-apis</artifactId>
-                <version>${ecbp.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.ecbp</groupId>
-                <artifactId>ecbp-order-impl</artifactId>
-                <version>${ecbp.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.github.ecbp</groupId>
                 <artifactId>ecbp-order-service-apis</artifactId>
+                <version>${ecbp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.ecbp</groupId>
+                <artifactId>ecbp-order-service-impl</artifactId>
                 <version>${ecbp.version}</version>
             </dependency>
             <dependency>
@@ -59,8 +54,8 @@
     </dependencyManagement>
 
     <modules>
-        <module>ecbp-order-apis</module>
-        <module>ecbp-order-impl</module>
+        <module>ecbp-order-service-apis</module>
+        <module>ecbp-order-service-impl</module>
     </modules>
 
 </project>
