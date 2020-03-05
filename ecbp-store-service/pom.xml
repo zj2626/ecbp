@@ -21,6 +21,7 @@
         <spring.boot.version>2.1.4.RELEASE</spring.boot.version>
         <spring.cloud.version>Finchley.RELEASE</spring.cloud.version>
         <ecbp.version>1.0.0-SNAPSHOT</ecbp.version>
+        <mysql_version>5.1.33</mysql_version>
     </properties>
 
     <dependencyManagement>
@@ -40,6 +41,24 @@
                 <artifactId>ecbp-store-service-impl</artifactId>
                 <version>${ecbp.version}</version>
             </dependency>
+
+            <!--mybatis-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>2.0.1</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql_version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>1.1.10</version>
+            </dependency>
+
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>

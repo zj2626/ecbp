@@ -40,6 +40,6 @@ public class ECBPStoreApplication {
 }
 
 /*
- * Dashboard 访问地址:http://127.0.0.1:8092/hystrix
- * Dashboard-Stream 地址:http://127.0.0.1:8092/hystrix.stream
+ * Dashboard 访问地址:http://{ip}:{port}/hystrix
+ * Dashboard-Stream 地址:http://{ip}:{port}/hystrix.stream
  * */

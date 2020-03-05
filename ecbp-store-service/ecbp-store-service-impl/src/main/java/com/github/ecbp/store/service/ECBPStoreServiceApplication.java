@@ -9,6 +9,7 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import tk.mybatis.spring.annotation.MapperScan;
 
 /**
  * ********************
@@ -22,6 +23,7 @@ import org.springframework.context.annotation.Bean;
 @EnableFeignClients
 @EnableHystrix
 @EnableHystrixDashboard
+@MapperScan(basePackages = "com.github.ecbp.store.service.mapper")
 public class ECBPStoreServiceApplication {
 
     public static void main(String[] args) {
@@ -40,6 +42,6 @@ public class ECBPStoreServiceApplication {
 }
 
 /*
- * Dashboard 访问地址:http://127.0.0.1:8092/hystrix
- * Dashboard-Stream 地址:http://127.0.0.1:8092/hystrix.stream
+ * Dashboard 访问地址:http://{ip}:{port}/hystrix
+ * Dashboard-Stream 地址:http://{ip}:{port}/hystrix.stream
  * */
