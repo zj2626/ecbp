@@ -16,7 +16,7 @@ public class PmsProductController extends BaseController<PmsProductService<PmsPr
 
     @Override
     public PmsProductDTO getById(@RequestBody Integer id) {
-        PmsProduct product = service.selectById(id);
+        PmsProduct product = service.getById(id);
         return Optional.ofNullable(product).map(p -> CopyUtils.copy(p, new PmsProductDTO())).orElse(null);
     }
 }
