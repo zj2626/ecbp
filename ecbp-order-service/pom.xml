@@ -13,6 +13,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <name>ecbp-order-service-parent</name>
     <description>Demo project for Spring Boot</description>
+    <packaging>pom</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
