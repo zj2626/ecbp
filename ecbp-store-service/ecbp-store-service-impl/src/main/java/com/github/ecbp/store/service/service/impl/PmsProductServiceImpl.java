@@ -10,8 +10,7 @@ import org.springframework.stereotype.Service;
 public class PmsProductServiceImpl extends BaseServiceImpl<PmsProductMapper, PmsProduct> implements PmsProductService<PmsProduct> {
 
     @Override
-    public PmsProduct selectById(Object id) {
-        System.out.println("入参 " + id);
+    public PmsProduct getById(Object id) {
         return mapper.selectByPrimaryKey(id);
     }
 }

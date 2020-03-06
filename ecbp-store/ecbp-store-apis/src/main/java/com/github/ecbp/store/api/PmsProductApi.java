@@ -2,8 +2,8 @@ package com.github.ecbp.store.api;
 
 import org.springframework.web.bind.annotation.PostMapping;
 
-public interface FunApi {
+public interface PmsProductApi {
 
-    @PostMapping("/store/fun1")
-    String fun(String name);
+    @PostMapping("/store/getById")
+    String getById(Integer id);
 }
