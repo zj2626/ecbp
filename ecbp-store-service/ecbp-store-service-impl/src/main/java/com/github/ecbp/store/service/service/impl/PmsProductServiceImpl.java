@@ -1,6 +1,6 @@
 package com.github.ecbp.store.service.service.impl;
 
-import com.github.ecbp.common.service.impl.BaseServiceImpl;
+import com.github.ecbp.common.data.service.impl.BaseServiceImpl;
 import com.github.ecbp.store.service.entity.PmsProduct;
 import com.github.ecbp.store.service.mapper.PmsProductMapper;
 import com.github.ecbp.store.service.service.PmsProductService;

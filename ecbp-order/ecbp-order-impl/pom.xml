@@ -20,7 +20,7 @@
 
         <dependency>
             <groupId>com.github.ecbp</groupId>
-            <artifactId>ecbp-common</artifactId>
+            <artifactId>ecbp-util-common</artifactId>
         </dependency>
 
         <dependency>

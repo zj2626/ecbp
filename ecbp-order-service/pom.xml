@@ -27,7 +27,12 @@
         <dependencies>
             <dependency>
                 <groupId>com.github.ecbp</groupId>
-                <artifactId>ecbp-common</artifactId>
+                <artifactId>ecbp-data-common</artifactId>
+                <version>${ecbp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.ecbp</groupId>
+                <artifactId>ecbp-util-common</artifactId>
                 <version>${ecbp.version}</version>
             </dependency>
             <dependency>

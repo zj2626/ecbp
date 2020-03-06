@@ -18,26 +18,43 @@
         <ecbp.version>1.0.0-SNAPSHOT</ecbp.version>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-beans</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-webmvc</artifactId>
-            <version>${spring.version}</version>
-        </dependency>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.github.ecbp</groupId>
+                <artifactId>ecbp-data-common</artifactId>
+                <version>${ecbp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.ecbp</groupId>
+                <artifactId>ecbp-util-common</artifactId>
+                <version>${ecbp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
 
-        <!--mybatis-->
-        <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper-spring-boot-starter</artifactId>
-            <version>2.1.5</version>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
+            <!--mybatis-->
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>2.1.5</version>
+                <scope>compile</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>ecbp-data-common</module>
+        <module>ecbp-util-common</module>
+    </modules>
 
     <build>
         <resources>

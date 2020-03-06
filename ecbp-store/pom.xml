@@ -27,7 +27,7 @@
         <dependencies>
             <dependency>
                 <groupId>com.github.ecbp</groupId>
-                <artifactId>ecbp-common</artifactId>
+                <artifactId>ecbp-util-common</artifactId>
                 <version>${ecbp.version}</version>
             </dependency>
             <dependency>

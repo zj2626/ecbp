@@ -1,6 +1,6 @@
 package com.github.ecbp.store.service.controller;
 
-import com.github.ecbp.common.controller.BaseController;
+import com.github.ecbp.common.data.controller.BaseController;
 import com.github.ecbp.store.service.api.PmsProductAttributeApi;
 import com.github.ecbp.store.service.entity.PmsProductAttribute;
 import com.github.ecbp.store.service.service.PmsProductAttributeService;

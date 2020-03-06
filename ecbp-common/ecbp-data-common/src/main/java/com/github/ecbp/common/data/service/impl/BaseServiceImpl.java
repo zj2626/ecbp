@@ -1,7 +1,7 @@
-package com.github.ecbp.common.service.impl;
+package com.github.ecbp.common.data.service.impl;
 
-import com.github.ecbp.common.mapper.BaseMapper;
-import com.github.ecbp.common.service.BaseService;
+import com.github.ecbp.common.data.mapper.BaseMapper;
+import com.github.ecbp.common.data.service.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;

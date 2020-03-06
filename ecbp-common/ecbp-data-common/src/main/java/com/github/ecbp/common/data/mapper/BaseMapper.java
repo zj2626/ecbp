@@ -1,4 +1,4 @@
-package com.github.ecbp.common.mapper;
+package com.github.ecbp.common.data.mapper;
 
 import tk.mybatis.mapper.common.Mapper;
 

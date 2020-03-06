@@ -1,4 +1,4 @@
-package com.github.ecbp.common.service;
+package com.github.ecbp.common.data.service;
 
 import java.util.List;
 

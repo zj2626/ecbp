@@ -28,7 +28,12 @@
         <dependencies>
             <dependency>
                 <groupId>com.github.ecbp</groupId>
-                <artifactId>ecbp-common</artifactId>
+                <artifactId>ecbp-data-common</artifactId>
+                <version>${ecbp.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.ecbp</groupId>
+                <artifactId>ecbp-util-common</artifactId>
                 <version>${ecbp.version}</version>
             </dependency>
             <dependency>
@@ -44,9 +49,9 @@
 
             <!--mybatis-->
             <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>2.0.1</version>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>2.1.5</version>
             </dependency>
             <dependency>
                 <groupId>mysql</groupId>
