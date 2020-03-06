@@ -2,13 +2,18 @@ package com.github.ecbp.store.service.entity;
 
 import io.swagger.annotations.ApiModelProperty;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-//@Table(name = "pms_product")
+@Table(name = "pms_product") // tk.mybatis下@Table可以不写(注解@Column同理), 原因见注解@NameStyle
 public class PmsProduct implements Serializable {
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY) // 主键生成策略, 可以使用tk.mybatis下的@KeySql替换
     private Long id;
 
     private Long brandId;

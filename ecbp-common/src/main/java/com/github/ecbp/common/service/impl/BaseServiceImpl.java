@@ -1,12 +1,12 @@
 package com.github.ecbp.common.service.impl;
 
+import com.github.ecbp.common.mapper.BaseMapper;
 import com.github.ecbp.common.service.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
-import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;
 
-public class BaseServiceImpl<M extends Mapper<T>, T> implements BaseService<T> {
+public class BaseServiceImpl<M extends BaseMapper<T>, T> implements BaseService<T> {
     @Autowired
     protected M mapper;
 

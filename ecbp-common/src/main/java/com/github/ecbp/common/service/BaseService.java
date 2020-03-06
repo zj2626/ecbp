@@ -2,12 +2,6 @@ package com.github.ecbp.common.service;
 
 import java.util.List;
 
-/**
- * ${DESCRIPTION}
- *
- * @author wanghaobin
- * @create 2017-06-08 16:26
- */
 public interface BaseService<T> {
     /**
      * 查询
