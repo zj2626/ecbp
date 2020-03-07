@@ -2,11 +2,12 @@ package com.github.ecbp.common.data.service.impl;
 
 import com.github.ecbp.common.data.mapper.BaseMapper;
 import com.github.ecbp.common.data.service.BaseService;
+import com.github.ecbp.common.entity.BaseEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-public class BaseServiceImpl<M extends BaseMapper<T>, T> implements BaseService<T> {
+public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEntity> implements BaseService<T> {
     @Autowired
     protected M mapper;
 

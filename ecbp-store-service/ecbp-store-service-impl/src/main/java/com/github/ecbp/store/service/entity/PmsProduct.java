@@ -1,11 +1,9 @@
 package com.github.ecbp.store.service.entity;
 
+import com.github.ecbp.common.entity.BaseEntity;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -13,12 +11,8 @@ import java.util.Date;
 
 @Data
 @Table(name = "pms_product") // tk.mybatis下@Table可以不写(注解@Column同理), 原因见注解@NameStyle
-public class PmsProduct implements Serializable {
+public class PmsProduct extends BaseEntity implements Serializable {
     private static final long serialVersionUID = -4672260872177805024L;
-
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY) // 主键生成策略, 可以使用tk.mybatis下的@KeySql替换
-    private Long id;
 
     private Long brandId;
 

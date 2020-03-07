@@ -1,21 +1,15 @@
 package com.github.ecbp.store.service.entity;
 
+import com.github.ecbp.common.entity.BaseEntity;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Data
-public class PmsFeightTemplate implements Serializable {
+public class PmsFeightTemplate extends BaseEntity implements Serializable {
     private static final long serialVersionUID = -3695646727891266005L;
-
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
 
     private String name;
 

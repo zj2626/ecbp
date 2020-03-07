@@ -1,20 +1,14 @@
 package com.github.ecbp.store.service.entity;
 
+import com.github.ecbp.common.entity.BaseEntity;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.io.Serializable;
 
 @Data
-public class PmsProductCategory implements Serializable {
+public class PmsProductCategory extends BaseEntity implements Serializable {
     private static final long serialVersionUID = 2555218384576400982L;
-
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
 
     @ApiModelProperty(value = "上机分类的编号：0表示一级分类")
     private Long parentId;

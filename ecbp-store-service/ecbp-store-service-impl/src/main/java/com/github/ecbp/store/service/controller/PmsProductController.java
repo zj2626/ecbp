@@ -15,6 +15,12 @@ import java.util.Optional;
 public class PmsProductController extends BaseController<PmsProductService<PmsProduct>, PmsProduct> implements PmsProductApi {
 
     @Override
+    public PmsProductDTO selectById(@RequestBody Integer id) {
+        PmsProduct product = service.selectById(id);
+        return Optional.ofNullable(product).map(p -> CopyUtils.copy(p, new PmsProductDTO())).orElse(null);
+    }
+
+    @Override
     public PmsProductDTO getById(@RequestBody Integer id) {
         PmsProduct product = service.getById(id);
         return Optional.ofNullable(product).map(p -> CopyUtils.copy(p, new PmsProductDTO())).orElse(null);
