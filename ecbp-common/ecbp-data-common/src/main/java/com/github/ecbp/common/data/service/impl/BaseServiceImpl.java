@@ -3,11 +3,15 @@ package com.github.ecbp.common.data.service.impl;
 import com.github.ecbp.common.data.mapper.BaseMapper;
 import com.github.ecbp.common.data.service.BaseService;
 import com.github.ecbp.common.entity.BaseEntity;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
 public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEntity> implements BaseService<T> {
+    protected final Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @Autowired
     protected M mapper;
 
