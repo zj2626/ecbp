@@ -6,21 +6,21 @@ import org.springframework.util.CollectionUtils;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * 对象拷贝转换工具类
  */
-public class CopyUtils {
-    public static <T> T copy(Object obj, T target) {
-        if (null == obj) {
+public class TransformUtils {
+    public static <T> T transform(Object sourse, T target) {
+        if (null == sourse) {
             return target;
         }
-
-        BeanUtils.copyProperties(obj, target);
+        BeanUtils.copyProperties(sourse, target);
         return target;
     }
 
-    public static <T> List<T> listCopy(List sourse, Class<T> targetClass) {
+    public static <T> List<T> listTransform(List sourse, Class<T> targetClass) {
         if (CollectionUtils.isEmpty(sourse)) {
             return Collections.emptyList();
         }

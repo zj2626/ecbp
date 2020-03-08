@@ -9,10 +9,5 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class PmsProductAttributeController extends BaseController<PmsProductAttributeService<PmsProductAttribute>, PmsProductAttribute> implements PmsProductAttributeApi {
-
-    @Override
-    public String getById(@RequestBody Integer id) {
-        return "success" + id;
-    }
 }
 

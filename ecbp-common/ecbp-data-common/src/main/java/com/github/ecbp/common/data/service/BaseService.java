@@ -64,7 +64,7 @@ public interface BaseService<T> {
      *
      * @param entity
      */
-    void insert(T entity);
+    Integer insert(T entity);
 
 
     /**
@@ -72,21 +72,21 @@ public interface BaseService<T> {
      *
      * @param entity
      */
-    void insertSelective(T entity);
+    Integer insertSelective(T entity);
 
     /**
      * 删除
      *
      * @param entity
      */
-    void delete(T entity);
+    Integer delete(T entity);
 
     /**
      * 根据Id删除
      *
      * @param id
      */
-    void deleteById(Object id);
+    //    Integer deleteById(Object id);
 
 
     /**
@@ -94,7 +94,7 @@ public interface BaseService<T> {
      *
      * @param entity
      */
-    void updateById(T entity);
+    Integer updateById(T entity);
 
 
     /**
@@ -102,14 +102,14 @@ public interface BaseService<T> {
      *
      * @param entity
      */
-    void updateSelectiveById(T entity);
+    Integer updateSelectiveById(T entity);
 
     /**
      * 根据ID集合批量删除
      *
      * @param ids
      */
-//    void deleteBatchByIds(List<Object> ids);
+//    Integer deleteBatchByIds(List<Object> ids);
 
 
     /**
@@ -117,5 +117,5 @@ public interface BaseService<T> {
      *
      * @param entitys
      */
-//    void updateBatch(List<T> entitys);
+//    Integer updateBatch(List<T> entitys);
 }

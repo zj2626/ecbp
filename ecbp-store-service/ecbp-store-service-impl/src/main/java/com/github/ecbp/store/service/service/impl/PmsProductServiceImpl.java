@@ -1,6 +1,7 @@
 package com.github.ecbp.store.service.service.impl;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.github.ecbp.common.data.service.impl.BaseServiceImpl;
 import com.github.ecbp.store.service.entity.PmsProduct;
 import com.github.ecbp.store.service.mapper.PmsProductMapper;
@@ -21,16 +22,15 @@ public class PmsProductServiceImpl extends BaseServiceImpl<PmsProductMapper, Pms
     private RedisTemplate<String, Object> redisTemplate;
 
     @Override
-    public PmsProduct getById(Object id) {
+    public PmsProduct selectById(Object id) {
         Object redisValue = redisTemplate.opsForValue().get(REDIS_KEY_PREFIX + id.toString());
         if (null != redisValue) {
-            PmsProduct result = JSON.parseObject(redisValue.toString(), PmsProduct.class);
+            PmsProduct result = JSONObject.parseObject(redisValue.toString(), PmsProduct.class);
             return null == result || StringUtils.isEmpty(result.getId()) ? null : result;
         }
-
         PmsProduct result = mapper.selectByPrimaryKey(id);
         if (null != result) {
-            redisTemplate.opsForValue().set(REDIS_KEY_PREFIX + id.toString(), JSON.toJSONString(result));
+            redisTemplate.opsForValue().set(REDIS_KEY_PREFIX + id.toString(), JSONObject.toJSONString(result));
         } else {
             redisTemplate.opsForValue().set(REDIS_KEY_PREFIX + id.toString(), "{}");
         }

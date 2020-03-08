@@ -3,6 +3,7 @@ package com.github.ecbp.store.service.entity;
 import com.github.ecbp.common.entity.BaseEntity;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.Table;
 import java.io.Serializable;
@@ -10,6 +11,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
+@EqualsAndHashCode(callSuper = true)
 @Table(name = "pms_product") // tk.mybatis下@Table可以不写(注解@Column同理), 原因见注解@NameStyle
 public class PmsProduct extends BaseEntity implements Serializable {
     private static final long serialVersionUID = -4672260872177805024L;
@@ -28,9 +30,6 @@ public class PmsProduct extends BaseEntity implements Serializable {
 
     @ApiModelProperty(value = "货号")
     private String productSn;
-
-    @ApiModelProperty(value = "删除状态：0->未删除；1->已删除")
-    private Integer deleteStatus;
 
     @ApiModelProperty(value = "上架状态：0->下架；1->上架")
     private Integer publishStatus;

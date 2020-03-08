@@ -23,10 +23,10 @@ public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEntity> impl
         return mapper.selectByPrimaryKey(id);
     }
 
-//    @Override
-//    public List<T> selectListByIds(List<Object> ids) {
-//        return mapper.selectByIds(ids);
-//    }
+    //    @Override
+    //    public List<T> selectListByIds(List<Object> ids) {
+    //        return mapper.selectByIds(ids);
+    //    }
 
     public List<T> selectList(T entity) {
         return mapper.select(entity);
@@ -36,46 +36,51 @@ public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEntity> impl
         return mapper.selectAll();
     }
 
-//    @Override
-//    public Long selectCountAll() {
-//        return mapper.selectCount();
-//    }
+    //    @Override
+    //    public Long selectCountAll() {
+    //        return mapper.selectCount();
+    //    }
 
     public Long selectCount(T entity) {
         return Long.valueOf(mapper.selectCount(entity));
     }
 
-    public void insert(T entity) {
-        mapper.insert(entity);
+    public Integer insert(T entity) {
+        entity.setId(null);
+        return mapper.insert(entity);
     }
 
-    public void insertSelective(T entity) {
-        mapper.insertSelective(entity);
+    public Integer insertSelective(T entity) {
+        return mapper.insertSelective(entity);
     }
 
-    public void delete(T entity) {
-        mapper.delete(entity);
+    public Integer delete(T entity) {
+        entity.setDeleteStatus(1);
+        return mapper.updateByPrimaryKeySelective(entity);
     }
 
-    public void deleteById(Object id) {
-        mapper.deleteByPrimaryKey(id);
+    public Integer updateById(T entity) {
+        return mapper.updateByPrimaryKey(entity);
     }
 
-    public void updateById(T entity) {
-        mapper.updateByPrimaryKey(entity);
+    public Integer updateSelectiveById(T entity) {
+        return mapper.updateByPrimaryKeySelective(entity);
     }
 
-    public void updateSelectiveById(T entity) {
-        mapper.updateByPrimaryKeySelective(entity);
-    }
-
-//    @Override
-//    public void deleteBatchByIds(List<Object> ids) {
-//        mapper.batchDeleteByIds(ids);
-//    }
-//
-//    @Override
-//    public void updateBatch(List<T> entitys) {
-//        mapper.batchUpdate(entitys);
-//    }
+    //    public Integer delete(T entity) {
+    //        return mapper.delete(entity);
+    //    }
+    //
+    //    public Integer deleteById(Object id) {
+    //        return mapper.deleteByPrimaryKey(id);
+    //    }
+    //    @Override
+    //    public Integer deleteBatchByIds(List<Object> ids) {
+    //        return mapper.batchDeleteByIds(ids);
+    //    }
+    //
+    //    @Override
+    //    public Integer updateBatch(List<T> entitys) {
+    //        return mapper.batchUpdate(entitys);
+    //    }
 }

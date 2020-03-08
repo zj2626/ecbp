@@ -3,7 +3,6 @@ package com.github.ecbp.store.service.api;
 import com.github.ecbp.store.service.param.PmsProductDTO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * 商品信息API
@@ -14,10 +13,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 public interface PmsProductApi {
 
     @PostMapping("/service/store/product/selectById")
-    @ApiOperation(value = "测试接口", notes = "测试接口")
-    PmsProductDTO selectById(@RequestBody Integer id);
+    @ApiOperation(value = "通过ID查询")
+    PmsProductDTO selectById(Long id);
 
-    @PostMapping("/service/store/product/getById")
-    @ApiOperation(value = "测试接口", notes = "测试接口")
-    PmsProductDTO getById(Integer id);
+    @PostMapping("/service/store/product/insert")
+    @ApiOperation(value = "插入")
+    Integer insert(PmsProductDTO param);
+
+    @PostMapping("/service/store/product/update")
+    @ApiOperation(value = "更新")
+    Integer update(PmsProductDTO param);
+
+    @PostMapping("/service/store/product/delete")
+    @ApiOperation(value = "删除[逻辑删除]")
+    Integer delete(Long id);
+
+    @ApiOperation(value = "商品列表[分页]")
+    @PostMapping("/service/store/product/getListByPage")
+    String getListByPage(Object param);
 }
