@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class PmsProductController extends BaseController<PmsProductService<PmsProduct>, PmsProduct> implements PmsProductApi {
+public class PmsProductController extends BaseController<PmsProductService<PmsProduct, Long>, PmsProduct, Long> implements PmsProductApi<PmsProductDTO, Long> {
 
     @Override
     public PmsProductDTO selectById(@RequestBody Long id) {

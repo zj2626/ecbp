@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEntity> implements BaseService<T> {
+public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEntity, ID> implements BaseService<T, ID> {
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
@@ -19,12 +19,12 @@ public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEntity> impl
         return mapper.selectOne(entity);
     }
 
-    public T selectById(Object id) {
+    public T selectById(ID id) {
         return mapper.selectByPrimaryKey(id);
     }
 
     //    @Override
-    //    public List<T> selectListByIds(List<Object> ids) {
+    //    public List<T> selectListByIds(List<ID> ids) {
     //        return mapper.selectByIds(ids);
     //    }
 
@@ -71,11 +71,11 @@ public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEntity> impl
     //        return mapper.delete(entity);
     //    }
     //
-    //    public Integer deleteById(Object id) {
+    //    public Integer deleteById(ID id) {
     //        return mapper.deleteByPrimaryKey(id);
     //    }
     //    @Override
-    //    public Integer deleteBatchByIds(List<Object> ids) {
+    //    public Integer deleteBatchByIds(List<ID> ids) {
     //        return mapper.batchDeleteByIds(ids);
     //    }
     //

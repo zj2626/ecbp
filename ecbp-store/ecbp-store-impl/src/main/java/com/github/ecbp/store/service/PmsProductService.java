@@ -16,6 +16,6 @@ public interface PmsProductService {
      * @param id
      * @return
      */
-    PmsProductDTO getById(Integer id);
+    PmsProductDTO selectById(Long id);
 }
 

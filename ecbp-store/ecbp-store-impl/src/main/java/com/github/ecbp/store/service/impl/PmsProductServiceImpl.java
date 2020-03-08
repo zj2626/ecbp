@@ -13,8 +13,8 @@ public class PmsProductServiceImpl implements PmsProductService {
     private PmsProductApiClient pmsProductApiClient;
 
     @Override
-    public PmsProductDTO getById(Integer id) {
-        return pmsProductApiClient.getById(id);
+    public PmsProductDTO selectById(Long id) {
+        return pmsProductApiClient.selectById(id);
     }
 }
 

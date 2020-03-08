@@ -14,7 +14,7 @@ import org.springframework.util.StringUtils;
 import java.util.concurrent.TimeUnit;
 
 @Service
-public class PmsProductServiceImpl extends BaseServiceImpl<PmsProductMapper, PmsProduct> implements PmsProductService<PmsProduct> {
+public class PmsProductServiceImpl extends BaseServiceImpl<PmsProductMapper, PmsProduct, Long> implements PmsProductService<PmsProduct, Long> {
 
     private static final String REDIS_KEY_PREFIX = "PmsProduct_";
 
@@ -22,7 +22,7 @@ public class PmsProductServiceImpl extends BaseServiceImpl<PmsProductMapper, Pms
     private RedisTemplate<String, Object> redisTemplate;
 
     @Override
-    public PmsProduct selectById(Object id) {
+    public PmsProduct selectById(Long id) {
         Object redisValue = redisTemplate.opsForValue().get(REDIS_KEY_PREFIX + id.toString());
         if (null != redisValue) {
             PmsProduct result = JSONObject.parseObject(redisValue.toString(), PmsProduct.class);

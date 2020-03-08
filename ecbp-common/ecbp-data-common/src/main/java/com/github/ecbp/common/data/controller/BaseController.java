@@ -6,7 +6,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class BaseController<S extends BaseService<T>, T extends BaseEntity> {
+import java.io.Serializable;
+
+public class BaseController<S extends BaseService<T, ID>, T extends BaseEntity, ID extends Serializable> {
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired

@@ -2,7 +2,7 @@ package com.github.ecbp.common.data.service;
 
 import java.util.List;
 
-public interface BaseService<T> {
+public interface BaseService<T, ID> {
     /**
      * 查询
      *
@@ -17,7 +17,7 @@ public interface BaseService<T> {
      * @param id
      * @return
      */
-    T selectById(Object id);
+    T selectById(ID id);
 
     /**
      * 根据ID集合来查询
@@ -25,7 +25,7 @@ public interface BaseService<T> {
      * @param ids
      * @return
      */
-//    List<T> selectListByIds(List<Object> ids);
+//    List<T> selectListByIds(List<ID> ids);
 
     /**
      * 查询列表
@@ -86,7 +86,7 @@ public interface BaseService<T> {
      *
      * @param id
      */
-    //    Integer deleteById(Object id);
+    //    Integer deleteById(ID id);
 
 
     /**
@@ -109,7 +109,7 @@ public interface BaseService<T> {
      *
      * @param ids
      */
-//    Integer deleteBatchByIds(List<Object> ids);
+//    Integer deleteBatchByIds(List<ID> ids);
 
 
     /**

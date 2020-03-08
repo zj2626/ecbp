@@ -22,8 +22,8 @@ public class PmsProductController {
      * @return
      */
     @PostMapping("/store/getById")
-    public String getById(@RequestBody Integer id) {
-        return Optional.ofNullable(pmsProductService.getById(id)).map(PmsProductDTO::toString).orElse(null);
+    public String getById(@RequestBody Long id) {
+        return Optional.ofNullable(pmsProductService.selectById(id)).map(PmsProductDTO::toString).orElse(null);
     }
 }
 

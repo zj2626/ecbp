@@ -1,5 +1,6 @@
 package com.github.ecbp.store.service.api;
 
+import com.github.ecbp.common.controller.BaseApi;
 import com.github.ecbp.store.service.param.PmsProductDTO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,11 +11,11 @@ import org.springframework.web.bind.annotation.PostMapping;
  * @author zhangj
  * @version $Id: PmsProductApi.java, v 0.1 2020/3/6 20:29 zhangj Exp $
  */
-public interface PmsProductApi {
+public interface PmsProductApi<DTO, ID> extends BaseApi<DTO, ID> {
 
     @PostMapping("/service/store/product/selectById")
     @ApiOperation(value = "通过ID查询")
-    PmsProductDTO selectById(Long id);
+    DTO selectById(ID id);
 
     @PostMapping("/service/store/product/insert")
     @ApiOperation(value = "插入")
@@ -26,7 +27,7 @@ public interface PmsProductApi {
 
     @PostMapping("/service/store/product/delete")
     @ApiOperation(value = "删除[逻辑删除]")
-    Integer delete(Long id);
+    Integer delete(ID id);
 
     @ApiOperation(value = "商品列表[分页]")
     @PostMapping("/service/store/product/getListByPage")
